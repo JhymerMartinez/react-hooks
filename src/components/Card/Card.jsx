@@ -1,12 +1,15 @@
 import React from 'react';
 import styles from './Card.module.css';
 
-function Card({image, name}) {
+function Card({character, onClickButton}) {
 
   return (
     <div className={styles.Card}>
-      <img src={image} alt=""/>
-      <h3>{name}</h3>
+      {/* <img src={character.image} alt=""/> */}
+      <h3>{character.name}</h3>
+      <button onClick={() => onClickButton(character)} type="button">
+        Add to favorite
+      </button>
     </div>
   )
 }
